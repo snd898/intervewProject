@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Attendence Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+    function loadDoc() {
+    //document.getElementById("demo").value="Out Time";
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+       //document.getElementById("demo").value="Out Time";
+      }
+    };
+    xhttp.open("GET", "AttendenceLogin.php", true);
+    xhttp.send();
+  }
+  </script>
+  
+</head>
+<body>
+	<input type="button" name="attendence_login" id="demo" value="In Time" onclick="loadDoc()">
+<div class="demo">
+  
+</div>
+</body>
+</html>
+
+
